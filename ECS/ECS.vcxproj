@@ -21,6 +21,13 @@
   <ItemGroup>
     <ClCompile Include="Source\ECSMain.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Entity.h" />
+    <ClInclude Include="Source\Includes.h" />
+    <ClInclude Include="Source\Registry.h" />
+    <ClInclude Include="Source\Storage.h" />
+    <ClInclude Include="Source\World.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

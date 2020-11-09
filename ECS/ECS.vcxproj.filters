@@ -10,4 +10,21 @@
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Entity.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Includes.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Registry.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Storage.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\World.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

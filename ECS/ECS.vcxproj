@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ECS.cpp" />
     <ClCompile Include="Source\ECSMain.cpp" />
   </ItemGroup>
   <ItemGroup>

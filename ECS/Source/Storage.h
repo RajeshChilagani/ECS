@@ -14,6 +14,7 @@ namespace eae6320
 		{
 		public:
 			virtual size_t GetStorageObjectID() = 0;
+			virtual void RemoveInstance(EntityID ID) = 0;
 			virtual ~Storage() = default;
 		};
 

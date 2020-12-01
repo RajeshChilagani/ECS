@@ -9,6 +9,9 @@
     <ClCompile Include="Source\ECSMain.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="ECS.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Entity.h">

@@ -7,10 +7,7 @@ namespace eae6320
 		class Entity
 		{
 		public:
-			Entity(Registry* i_Registry)
-				:UEntityID(GetUEntityID())
-				,EntityRegistry(i_Registry)
-			{}
+			Entity(Registry* i_Registry);
 			
 			template<typename Component>
 			bool HasComponent()
@@ -37,14 +34,13 @@ namespace eae6320
 				EntityRegistry->Remove<Component>(UEntityID);
 			}
 
+			EntityID GetUEntityID() { return UEntityID; }
+
 		private:
 			EntityID UEntityID;
 			Registry* EntityRegistry;
 		};
 
-		Entity CreateEntity(Registry* i_Registry)
-		{
-			return Entity(i_Registry);
-		}
+		Entity CreateEntity(Registry* i_Registry);
 	}
 }

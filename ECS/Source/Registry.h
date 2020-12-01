@@ -9,18 +9,20 @@ namespace eae6320
 {
 	namespace ECS
 	{
-		EntityID GetUEntityID()
-		{
-			std::chrono::time_point Time = std::chrono::system_clock::now();
-			EntityID Id = (EntityID)std::chrono::duration_cast<std::chrono::nanoseconds>(Time.time_since_epoch()).count();
-			return Id;
-		}
-
+		
 		class Registry
 		{
 		public:
 			Registry() = default;
 			~Registry() = default;
+
+			void RemoveAllComponents(EntityID Id)
+			{
+				for (auto it = StoragePools.begin(); it!=StoragePools.end(); ++it)
+				{
+					it->second->RemoveInstance(Id);
+				}
+			}
 
 			template<typename Component>
 			void Add(EntityID Id, const Component& ComponentInstance)

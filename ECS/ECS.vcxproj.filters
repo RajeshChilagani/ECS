@@ -12,37 +12,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\ECSMain.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="ECSPools.cpp">
+    <ClCompile Include="Source\ECSMain.cpp" />
+    <ClCompile Include="Source\ECSPools\ECSPools.cpp">
       <Filter>Source\ECSPools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\World.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Entity.h">
-      <Filter>Source\ECSPools</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Includes.h">
-      <Filter>Source\ECSPools</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Registry.h">
-      <Filter>Source\ECSPools</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Storage.h">
-      <Filter>Source\ECSPools</Filter>
-    </ClInclude>
-    <ClInclude Include="Components.h">
-      <Filter>Source\ECSPools</Filter>
-    </ClInclude>
     <ClInclude Include="Source\EC\EC.h">
       <Filter>Source\EC</Filter>
     </ClInclude>
     <ClInclude Include="Source\EC\ECComponents.h">
       <Filter>Source\EC</Filter>
     </ClInclude>
+    <ClInclude Include="Source\ECSExamples.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components.h">
+      <Filter>Source\ECSPools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ECSPools\Entity.h" />
+    <ClInclude Include="Source\ECSPools\Includes.h" />
+    <ClInclude Include="Source\ECSPools\Registry.h" />
+    <ClInclude Include="Source\ECSPools\Storage.h" />
   </ItemGroup>
 </Project>

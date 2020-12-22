@@ -1,5 +1,5 @@
-#include "Entity.h"
-#include "../Components.h"
+#include "ECSPools/Entity.h"
+#include "Components.h"
 #include "EC/EC.h"
 #include "EC/ECComponents.h"
 #include <time.h>
@@ -24,7 +24,7 @@ int main()
 	std::chrono::duration<double> elpased_seconds = End - Start;
 	std::cout<<"ECS:"<< elpased_seconds.count() << std::endl;
 
-	// ECS Old
+	// EC Implementation
 	Start = std::chrono::steady_clock::now();
 	for (int i = 0; i < 100000; ++i)
 	{

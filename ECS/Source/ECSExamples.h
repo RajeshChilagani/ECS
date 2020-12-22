@@ -1,6 +1,7 @@
 #pragma once
-#include "Entity.h"
-#include "../Components.h"
+#include "ECSPools/Entity.h"
+#include "Components.h"
+#include <iostream>
 void TesTRValue(int&& a)
 {
 	std::cout << a;

@@ -4,30 +4,45 @@
     <Filter Include="Source">
       <UniqueIdentifier>{40ba5327-2299-47a7-a86b-7381b62fbf86}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\ECSPools">
+      <UniqueIdentifier>{6a4580d2-f228-405c-bb46-e9d6b151861c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\EC">
+      <UniqueIdentifier>{b8599438-ea84-4515-8c27-8ce4146c71db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ECSMain.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="ECS.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="ECSPools.cpp">
+      <Filter>Source\ECSPools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Entity.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Includes.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Registry.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Storage.h">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="Source\World.h">
       <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Entity.h">
+      <Filter>Source\ECSPools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Includes.h">
+      <Filter>Source\ECSPools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Registry.h">
+      <Filter>Source\ECSPools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Storage.h">
+      <Filter>Source\ECSPools</Filter>
+    </ClInclude>
+    <ClInclude Include="Components.h">
+      <Filter>Source\ECSPools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\EC\EC.h">
+      <Filter>Source\EC</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\EC\ECComponents.h">
+      <Filter>Source\EC</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -37,7 +37,19 @@ namespace eae6320
 					InstancesMap[Id] = ComponentInstance;
 					return true;
 				}
-				InstancesMap.insert(std::pair<EntityID, Component>(Id, ComponentInstance));
+				InstancesMap.insert(std::make_pair(Id, ComponentInstance));
+				return true;
+			}
+
+			template<typename... Args>
+			bool EmplaceInstance(EntityID Id, Args&&... MArgs)
+			{
+				if (InstancesMap.find(Id) != InstancesMap.end())
+				{
+					InstancesMap[Id] = Component(std::forward<Args>(MArgs)...);
+					return true;
+				}
+				InstancesMap.emplace(Id,std::forward<Args>(MArgs)...);
 				return true;
 			}
 

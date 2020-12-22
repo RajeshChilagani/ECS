@@ -19,10 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ECS.cpp" />
+    <ClCompile Include="ECSPools.cpp" />
     <ClCompile Include="Source\ECSMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Components.h" />
+    <ClInclude Include="Source\EC\EC.h" />
+    <ClInclude Include="Source\EC\ECComponents.h" />
     <ClInclude Include="Source\Entity.h" />
     <ClInclude Include="Source\Includes.h" />
     <ClInclude Include="Source\Registry.h" />

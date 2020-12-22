@@ -22,6 +22,12 @@ namespace eae6320
 				EntityRegistry->Add<Component>(UEntityID, ComponentInstance);
 			}
 
+			template<typename Component, typename... Args>
+			void EmplaceComponent(Args&&... MArgs)
+			{
+				EntityRegistry->Emplace<Component>(UEntityID, std::forward<Args>(MArgs)...);
+			}
+
 			template<typename Component>
 			Component* GetComponent()
 			{

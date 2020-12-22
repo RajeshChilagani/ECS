@@ -36,6 +36,18 @@ namespace eae6320
 				Pool->AddInstance(Id, ComponentInstance);
 			}
 
+			template<typename Component, typename... Args>
+			void Emplace(EntityID Id, Args&&... MArgs)
+			{
+				auto ComponentId = typeid(Component).hash_code();
+				if (StoragePools.find(ComponentId) == StoragePools.end())
+				{
+					InsertPool<Component>();
+				}
+				auto Pool = static_cast<ComponentStorage<Component>*>(StoragePools[ComponentId]);
+				Pool->EmplaceInstance(Id,std::forward<Args>(MArgs)...);
+			}
+
 			template<typename Component>
 			Component* Get(EntityID Id)
 			{

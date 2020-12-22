@@ -49,7 +49,7 @@ namespace eae6320
 					InstancesMap[Id] = Component(std::forward<Args>(MArgs)...);
 					return true;
 				}
-				InstancesMap.emplace(Id,std::forward<Args>(MArgs)...);
+				InstancesMap.try_emplace(Id,std::forward<Args>(MArgs)...);
 				return true;
 			}
 

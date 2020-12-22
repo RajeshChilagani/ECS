@@ -4,17 +4,6 @@
 #include "EC/ECComponents.h"
 #include <time.h>
 #include <iostream>
-
-void TesTRValue(int&& a)
-{
-	std::cout << a;
-}
-
-template<typename ... Args>
-void TestFunc(Args&&... MArgs)
-{
-	int a[] = { 0,0,(TesTRValue(std::forward<Args>(MArgs)),0)... };
-}
 int main()
 {
 	eae6320::ECS::Registry R;
@@ -24,10 +13,8 @@ int main()
 	{
 		auto E = eae6320::ECS::CreateEntity(&R);
 		E.EmplaceComponent<TagComponent>("DefaultString");
-		E.EmplaceComponent<TagComponent>("DefaultString");
 		E.EmplaceComponent<TransformComponent>(1);
-		/*E.AddComponent<TagComponent>(TagComponent("DeafultString"));
-		E.AddComponent<TransformComponent>(TransformComponent(1));*/
+		E.EmplaceComponent<ColliderComponent>(Vector{ 1,2,3 }, Vector{4,5,6});
 	}
 	for (auto it = R.GetComponentStorageIterator<TagComponent>(); it.Get() != it.End(); ++it)
 	{

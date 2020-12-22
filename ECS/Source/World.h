@@ -1,6 +1,16 @@
 #pragma once
 #include "Entity.h"
 #include "../Components.h"
+void TesTRValue(int&& a)
+{
+	std::cout << a;
+}
+
+template<typename ... Args>
+void TestFunc(Args&&... MArgs)
+{
+	int a[] = { 0,0,(TesTRValue(std::forward<Args>(MArgs)),0)... };
+}
 static void ECSPoolsExample(eae6320::ECS::Registry& R)
 {
 	//E1
